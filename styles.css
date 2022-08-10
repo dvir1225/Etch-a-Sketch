@@ -1,0 +1,30 @@
+.body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 0;
+}
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    max-width: 800px;
+    height: 800px;
+    flex: 1 1 0;
+    justify-content: center;
+}
+
+.gridColumn {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+.gridItem {
+    flex: 1 1 0;
+    min-width: 6px;
+    height: auto;
+    border: solid 1px black;
+}
