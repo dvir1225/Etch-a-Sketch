@@ -11,12 +11,20 @@ function getGridNum (){
 }
 //assign variables to HTML elements
 let grid = document.querySelector('.grid');
-getGridNum()
+//getGridNum()
 let gridItem
 let gridWidth
 let randomColor = Math.floor(Math.random()*16777215).toString(16);
+let gridGenerator = document.querySelector('.gridGenerator');
 
-function gridSize (num){
+gridGenerator.addEventListener('click', newGrid);
+gridGenerator.addEventListener('click', gridSize);
+
+function newGrid (){
+    document.querySelector('.grid').innerHTML = ""
+}
+function gridSize (){
+    getGridNum();
         for (let i=0; i<num; i++){
             gridWidth = document.createElement('div');
             gridWidth.setAttribute("class", "gridColumn");
@@ -37,4 +45,4 @@ function gridSize (num){
 const gridColumns = document.querySelectorAll('.gridColumn');
 const gridItems = document.querySelectorAll('.gridItem');
 
-gridSize(num);
+//gridSize(num);

@@ -1,11 +1,14 @@
-.body {
+.button-and-grid {
     display: flex;
-    flex-flow: column nowrap;
-    flex: 1 1 0;
+    flex-direction: column;
+}
+
+.gridGenerator {
+    width: fit-content;
+    align-self: center;
 }
 .main-content {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -14,7 +17,6 @@
     max-width: 800px;
     height: 800px;
     flex: 1 1 0;
-    justify-content: center;
 }
 
 .gridColumn {
@@ -24,7 +26,5 @@
 }
 .gridItem {
     flex: 1 1 0;
-    min-width: 6px;
-    height: auto;
     border: solid 1px black;
 }
