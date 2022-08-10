@@ -14,6 +14,7 @@ let grid = document.querySelector('.grid');
 getGridNum()
 let gridItem
 let gridWidth
+let randomColor = Math.floor(Math.random()*16777215).toString(16);
 
 function gridSize (num){
         for (let i=0; i<num; i++){
@@ -22,8 +23,11 @@ function gridSize (num){
             gridWidth.setAttribute("column", i+1);
         for(let j=0; j<num; j++){
             gridItem = document.createElement('div');
-            gridItem.setAttribute('class', 'gridItem')
-            gridItem.setAttribute('item', j+1)
+            gridItem.setAttribute('class', 'gridItem');
+            gridItem.setAttribute('row', j+1);
+            gridItem.addEventListener("mouseover", function() {
+                this.style.backgroundColor = "#" + randomColor;
+            });
             gridItem.innerText = " ";
             gridWidth.appendChild(gridItem);
         } grid.appendChild(gridWidth);
