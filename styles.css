@@ -3,9 +3,17 @@
     flex-direction: column;
 }
 
+.page-title {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration:underline;
+}
 .gridGenerator {
     width: fit-content;
     align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 .main-content {
     display: flex;
