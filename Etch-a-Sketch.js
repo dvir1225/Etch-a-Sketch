@@ -14,7 +14,13 @@ let grid = document.querySelector('.grid');
 //getGridNum()
 let gridItem
 let gridWidth
-let randomColor = Math.floor(Math.random()*16777215).toString(16);
+let randomColor
+
+function getRandomColor(){
+    randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+}
+
 let gridGenerator = document.querySelector('.gridGenerator');
 
 gridGenerator.addEventListener('click', newGrid);
@@ -34,7 +40,7 @@ function gridSize (){
             gridItem.setAttribute('class', 'gridItem');
             gridItem.setAttribute('row', j+1);
             gridItem.addEventListener("mouseover", function() {
-                this.style.backgroundColor = "#" + randomColor;
+                this.style.backgroundColor = "#" + getRandomColor();
             });
             gridItem.innerText = " ";
             gridWidth.appendChild(gridItem);
